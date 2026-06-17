@@ -1,9 +1,11 @@
-﻿namespace Dsw2026Ej15.Dsw2026Ej15.Domain
+﻿using System;
+
+namespace Dsw2026Ej15.Dsw2026Ej15.Domain;
+
+public class ValidationException : Exception
 {
-    public class ValidationException
+    public ValidationException(string message)
+        : base(message)
     {
-        public ValidationException(string message) : base(message)
-        {
-        }
     }
 }

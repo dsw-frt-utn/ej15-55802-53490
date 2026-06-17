@@ -7,7 +7,7 @@ namespace Dsw2026Ej15.Dsw2026Ej15.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class DoctorsController
+    public class DoctorsController : ControllerBase
     {
         private readonly IPersistence _persistence;
 
