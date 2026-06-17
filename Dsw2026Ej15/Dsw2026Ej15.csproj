@@ -11,8 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Dsw2026Ej15.Api\" />
     <Folder Include="Dsw2026Ej15.Data\" />
   </ItemGroup>
 
