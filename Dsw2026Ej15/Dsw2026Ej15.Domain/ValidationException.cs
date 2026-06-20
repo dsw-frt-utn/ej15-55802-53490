@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Dsw2026Ej15.Dsw2026Ej15.Domain;
+﻿namespace Dsw2026Ej15.Dsw2026Ej15.Domain;
 
 public class ValidationException : Exception
 {

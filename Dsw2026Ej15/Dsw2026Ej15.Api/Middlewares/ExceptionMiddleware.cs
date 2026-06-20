@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+﻿using Dsw2026Ej15.Dsw2026Ej15.Domain;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Dsw2026Ej15.Dsw2026Ej15.Api.Middlewares
 {
@@ -30,6 +30,14 @@ namespace Dsw2026Ej15.Dsw2026Ej15.Api.Middlewares
                 };
 
                 await context.Response.WriteAsJsonAsync(problem);
+            }
+            catch (NotFoundException ex)
+            {
+                context.Response.StatusCode = StatusCodes.Status404NotFound;
+                await context.Response.WriteAsJsonAsync(new
+                {
+                    message = ex.Message
+                });
             }
             catch (Exception)
             {
