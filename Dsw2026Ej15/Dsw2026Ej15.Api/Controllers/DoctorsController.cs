@@ -64,7 +64,7 @@ namespace Dsw2026Ej15.Dsw2026Ej15.Api.Controllers
             var doctor = _persistence.GetDoctorById(id);
 
             if (doctor is null || !doctor.IsActive)
-                return NotFound();
+                throw new NotFoundException("No encontrado");
 
             var response = MapToResponse(doctor);
             return Ok(response);
@@ -76,7 +76,7 @@ namespace Dsw2026Ej15.Dsw2026Ej15.Api.Controllers
             var doctor = _persistence.GetDoctorById(id);
 
             if (doctor is null || !doctor.IsActive)
-                return NotFound();
+                throw new NotFoundException("No encontrado");
 
             doctor.IsActive = false;
             _persistence.UpdateDoctor(doctor);
